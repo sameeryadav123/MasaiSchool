@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom-2(Query-selector)</title>
+</head>
+<body>
+    <h1 class="c" id="ro">Hello Motto</h1>
+    <h1 class="c" id="ro">Hi Samsung</h1>
+</body>
+</html>
+<script>
+    let st1=document.querySelector("#ro");
+    st1.style.color="red";
+    
+    let st2=document.querySelectorAll(".c");
+    st2.style.backgroundColor="green";
+
+    let st3=document.querySelector("h1");
+st3.style.fontSize="50px"
+</script>

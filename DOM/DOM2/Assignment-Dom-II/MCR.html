@@ -1,0 +1,99 @@
+<!-- Complete the functionality part of Masai calculator -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai Calculator Return</title>
+</head>
+<body>
+    <h1 id="display"></h1>
+    <div class="btn">
+        <button>0</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+       
+
+    </div>
+
+    <div class="operator">
+        <button>+</button>
+        <button>-</button>
+        <button>*</button>
+        <button>/</button>
+        <button>%</button>
+        <button>**</button>
+        
+    </div>
+
+    <button id="equal">=</button>
+</body>
+</html>
+
+<script>
+    let keypadBtn=document.querySelectorAll(".btn> button")
+    let Operatorbtn=document.querySelectorAll(".operator > button");
+    let equlaBtn=document.querySelector("#equal");
+    let heaDing=document.querySelector("h1");
+
+    let fnumber="";
+    let secNumber="";
+    let IsFtNumber=true;
+    let operator="";
+
+    equlaBtn.addEventListener("click",function(){
+        heaDing.innerText=calculating(fnumber,secNumber,operator)
+    })
+
+ for(let i=0;i<keypadBtn.length;i++){
+
+    if(IsFtNumber == true){
+        fnumber+=keypadBtn[i].innerText;
+        heaDing.innerText=fnumber;
+    }
+    else{
+        secNumber+=keypadBtn[i].innerText;
+        heaDing.innerText=secNumber
+    }
+ }
+
+
+ for(let i=0 ; i<operator.length;i++){
+    IsFtNumber = false;
+    operator+=operator[j].innerText
+ }
+ 
+    function calculating(fnumber,secNumber,operator){
+
+        switch(operator){
+
+            case "+":return Number(fnumber) + Number(secNumber);
+
+            case "-":return Number(fnumber) - Number(secNumber);
+
+            case "*":return Number(fnumber) * Number(secNumber);
+
+            case "/":return Number(fnumber) / Number(secNumber);
+
+            case "%":return Number(fnumber) % Number(secNumber);
+
+            case "**":return Number(fnumber) ** Number(secNumber);
+              
+            
+        }
+    }
+
+
+    
+
+   
+</script>

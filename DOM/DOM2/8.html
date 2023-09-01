@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="keypad">
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+    </div>
+
+    <div class="operator">
+        <button>+</button>
+        <button>-</button>
+        <button>*</button>
+        <button>/</button>
+        <button></button>
+    </div>
+    <button id="equal">=</button>
+</body>
+<script>
+   let keypadButton=document.querySelectorAll(".keypad > button");
+   let operatorButton=document.querySelectorAll(".operator > button");
+
+   let fno="";
+   let sno="";
+   let fsno
+
+for(let i=0; i<keypadButton.length;i++){
+    keypadButton[i].addEventListener("click",functon(){
+fno+=keypadButton[i].innerText;
+heading.innerText=fno
+    })
+
+}
+
+for(let i=0; i<operatorButton.length;i++){
+    operatorButton[i].addEventListener("click",function(){
+
+    })
+}
+</script>
+</html>
