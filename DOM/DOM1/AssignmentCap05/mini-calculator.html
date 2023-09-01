@@ -1,0 +1,65 @@
+<!-- Mini Calculator
+Create a mini calculator application, which has following functionalities
+Addition
+Subtraction
+Division
+Multiplication
+Your app should have
+Two input boxes which should take two numbers from the user.
+Four Buttons with following text content
+Add
+Subtract
+Divide
+Multiply
+When user enter 2 and 4 and clicks on multiply button, an alert should come with 8 as ans
+When user enter 8 and 4 and clicks on Divide button,an alert should come with 2 as ans -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Calculator</title>
+</head>
+<body>
+    <div id="parent">
+        <input type="text" id="values1" placeholder="enter 1st number">
+        <input type="text" id="values2" placeholder="enter 2nd number">
+        <button onclick="addition()">Add</button> <button onclick="subtraction()">Subtract</button> <button onclick="divisibleBy()">Divide</button> <button onclick="multipyBy()">Multiply</button>
+    </div>
+</body>
+</html>
+<script>
+    let num1=document.getElementById("values1");
+    let num2=document.getElementById("values2")
+    function addition(){
+     let  a=num1.value;
+    let  b=num2.value;
+     let sum=a+b
+     console.log(sum)
+
+    }
+
+    let subtraction=()=>{
+        let c=num1.value;
+        let d=num2.value
+        let sub=c-d;
+        console.log(sub)
+    }
+
+    let divisibleBy=()=>{
+        let e=num1.value;
+        let f=num2.value;
+        let divided=e/f;
+        console.log(divided)
+
+    }
+
+    let multipyBy=()=>{
+        let g=num1.value;
+        let h=num2.value;
+        let multiply=g*h;
+        console.log(multiply)
+    }
+</script>
+
